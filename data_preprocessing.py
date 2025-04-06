@@ -40,7 +40,7 @@ def convert_duration(duration_str: str) -> float:
         return float('inf')  # Default to infinite for unrecognized formats
 
 # Load and preprocess data with error handling and enhanced embedding
-def load_and_preprocess_data(input_file: str = "SHL_Final_enriched_Data.csv") -> Tuple[pd.DataFrame, SentenceTransformer, faiss.IndexFlatL2]:
+def load_and_preprocess_data(input_file: str = "data/SHL_Final_enriched_Data.csv") -> Tuple[pd.DataFrame, SentenceTransformer, faiss.IndexFlatL2]:
     try:
         # Load the CSV file
         df = pd.read_csv(input_file)

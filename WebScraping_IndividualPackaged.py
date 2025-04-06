@@ -59,7 +59,7 @@ for start in range(0, 384, 12):
 
 # Save to CSV
 df = pd.DataFrame(data, columns=["Assessment Name", "URL", "Remote Testing", "Adaptive/IRT Support", "Test Type"])
-df.to_csv("shl_individual_test_solutions.csv", index=False)
+df.to_csv("data/shl_individual_test_solutions.csv", index=False)
 
 print("✅ Saved Individual Test Solutions to 'shl_individual_test_solutions.csv'")
 

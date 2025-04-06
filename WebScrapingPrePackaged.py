@@ -69,7 +69,7 @@ prepackaged_data = scrape_prepackaged(prepackaged_url, 12)
 
 # Save to CSV
 df = pd.DataFrame(prepackaged_data, columns=["Assessment Name", "URL", "Remote Testing", "Adaptive/IRT Support", "Test Type"])
-df.to_csv("shl_prepackaged_assessments.csv", index=False)
+df.to_csv("data/shl_prepackaged_assessments.csv", index=False)
 
 print("✅ Pre-packaged Job Solutions saved to 'shl_prepackaged_assessments.csv'.")
 

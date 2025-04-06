@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import requests
 
 # Load the existing CSV file
-input_file = "SHL_merged.csv"
+input_file = "data/SHL_merged.csv"
 df = pd.read_csv(input_file)
 
 # Function to scrape data from URL
@@ -57,6 +57,6 @@ def scrape_assessment_details(url):
 df[['Job Description', 'Duration']] = df['URL'].apply(scrape_assessment_details).apply(pd.Series)
 
 # Save to a new CSV file
-output_file = "SHL_Final_enriched_Data.csv"
+output_file = "data/SHL_Final_enriched_Data.csv"
 df.to_csv(output_file, index=False)
 print(f"New CSV file saved as {output_file}")
