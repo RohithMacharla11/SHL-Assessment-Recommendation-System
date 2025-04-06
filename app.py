@@ -5,6 +5,8 @@ import requests
 import warnings
 import faiss
 import numpy as np
+from typing import Tuple
+from sentence_transformers import SentenceTransformer
 warnings.filterwarnings("ignore", category=UserWarning, module="streamlit.runtime.scriptrunner_utils")
 #from data_preprocessing import load_and_preprocess_data
 from recommendation_engine import recommend_assessments, evaluate_recommendations
