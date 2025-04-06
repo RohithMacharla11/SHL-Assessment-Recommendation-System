@@ -125,14 +125,14 @@ def evaluate_recommendations(queries: List[str], relevant_assessments: List[List
 
     return mean_recall_3, mean_ap_3
 
-if __name__ == "__main__":
-    from data_preprocessing import load_and_preprocess_data
-    df, model, index = load_and_preprocess_data()
-    query = "We are seeking a Junior Java Developer to join our development team. The ideal candidate will be responsible for writing clean, efficient Java code, collaborating with business analysts and product managers to design software solutions, and participating in code reviews. Key tasks include developing and maintaining web applications using Java frameworks (e.g., Spring), troubleshooting and debugging applications, and working effectively in a team environment to meet project deadlines."
-    recs = recommend_assessments(query, df, model, index, max_duration=40, preferred_test_types=['K', 'C'])
-    print("Recommendations:", recs)
+#if __name__ == "__main__":
+    # from data_preprocessing import load_and_preprocess_data
+    # df, model, index = load_and_preprocess_data()
+    # query = "We are seeking a Junior Java Developer to join our development team. The ideal candidate will be responsible for writing clean, efficient Java code, collaborating with business analysts and product managers to design software solutions, and participating in code reviews. Key tasks include developing and maintaining web applications using Java frameworks (e.g., Spring), troubleshooting and debugging applications, and working effectively in a team environment to meet project deadlines."
+    # recs = recommend_assessments(query, df, model, index, max_duration=40, preferred_test_types=['K', 'C'])
+    # print("Recommendations:", recs)
 
-    queries = ["Hiring for Java developers with collaboration skills", "Administrative professional test"]
-    relevant = [["Java Web Services (New)", "Java 8 (New)"], ["Administrative Professional - Short Form"]]
-    recall, ap = evaluate_recommendations(queries, relevant, df, model, index)
-    print(f"Mean Recall@3: {recall:.4f}, Mean AP@3: {ap:.4f}")
+    # queries = ["Hiring for Java developers with collaboration skills", "Administrative professional test"]
+    # relevant = [["Java Web Services (New)", "Java 8 (New)"], ["Administrative Professional - Short Form"]]
+    # recall, ap = evaluate_recommendations(queries, relevant, df, model, index)
+    # print(f"Mean Recall@3: {recall:.4f}, Mean AP@3: {ap:.4f}")
