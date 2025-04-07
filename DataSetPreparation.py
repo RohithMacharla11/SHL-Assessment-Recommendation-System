@@ -1,6 +1,6 @@
 import pandas as pd
 from bs4 import BeautifulSoup
-import requests
+import test_api
 
 # Load the existing CSV file
 input_file = "data/SHL_merged.csv"
@@ -9,7 +9,7 @@ df = pd.read_csv(input_file)
 # Function to scrape data from URL
 def scrape_assessment_details(url):
     try:
-        response = requests.get(url, timeout=5)
+        response = test_api.get(url, timeout=5)
         response.raise_for_status()
         soup = BeautifulSoup(response.content, 'html.parser')
 
@@ -39,7 +39,7 @@ def scrape_assessment_details(url):
             'Duration': duration
         }
 
-    except requests.RequestException as e:
+    except test_api.RequestException as e:
         print(f"Network error scraping {url}: {e}")
         return {
             'Job Description': None,

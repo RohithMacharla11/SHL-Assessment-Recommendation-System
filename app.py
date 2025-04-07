@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import re
-import requests
+import test_api
 import warnings
 import faiss
 import numpy as np
@@ -154,10 +154,10 @@ def extract_info_from_jd(job_description: str) -> tuple:
 # Fetch text from URL
 def fetch_text_from_url(url: str) -> str:
     try:
-        response = requests.get(url, timeout=10)
+        response = test_api.get(url, timeout=10)
         response.raise_for_status()
         return response.text
-    except requests.RequestException as e:
+    except test_api.RequestException as e:
         st.error(f"Error fetching URL: {str(e)}")
         return ""
 
