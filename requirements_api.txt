@@ -5,3 +5,4 @@ numpy==2.0.2
 pandas==2.2.3
 faiss-cpu==1.10.0 
 pydantic== 2.9.2
+mangum==0.17.0
