@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import re
-import test_api
 import warnings
 import faiss
 import numpy as np
