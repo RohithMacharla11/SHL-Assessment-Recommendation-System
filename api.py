@@ -88,10 +88,7 @@ async def get_recommendations(request: QueryRequest) -> Dict[str, List[Dict]]:
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error processing request: {str(e)}")
 # This is for Testing locally eg: using POSTMAN 
-# if __name__ == "__main__":
-#     import uvicorn
-#     port = int(os.getenv("PORT", 7000))  # Use environment variable PORT or default to 7000
-#     uvicorn.run(app, host="0.0.0.0", port=port)
-
-# Lambda handler
-handler = Mangum(app)  # Wrap FastAPI app with Mangum for Lambda
+if __name__ == "__main__":
+    import uvicorn
+    port = int(os.getenv("PORT", 7000))  # Use environment variable PORT or default to 7000
+    uvicorn.run(app, host="0.0.0.0", port=port)
