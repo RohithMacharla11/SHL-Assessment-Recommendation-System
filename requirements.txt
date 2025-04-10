@@ -1,15 +1,20 @@
-streamlit==1.44.1
-pandas==2.2.3
-requests==2.32.3
-numpy==2.0.2
-scikit-learn==1.6.1
-faiss-cpu==1.10.0        # Replace with faiss-gpu==1.7.2 if using GPU
-sentence_transformers==4.0.2
-torch==2.5.1
-transformers==4.50.3
-flask==3.1.0
-flask-cors==5.0.0
-selenium==4.30.0
-webdriver-manager==4.0.2
+# streamlit==1.44.1
+# pandas==2.2.3
+# requests==2.32.3
+# numpy==2.0.2
+# scikit-learn==1.6.1
+# torch==2.5.1 #why this
+# transformers==4.50.3
+# flask==3.1.0
+# flask-cors==5.0.0
+# selenium==4.30.0
+# webdriver-manager==4.0.2
 fastapi == 0.115.12
 uvicorn == 0.34.0
+fastapi==0.110.0
+sentence-transformers==2.6.1
+numpy==1.26.4
+pandas==2.2.2
+faiss-cpu==1.8.0
+pydantic==2.6.4
+# mangum==0.17.0
